@@ -16,7 +16,7 @@ steps:
   - name: 'docker'
     args: ['exec','django', 'python3','manage.py','test']
 
-  # Pushing image
+  # Pushing image to gcr
   - name: 'docker'
     args: ['push', 'gcr.io/fullcycle-exemplos/django-cloudrun:$SHORT_SHA']
 
